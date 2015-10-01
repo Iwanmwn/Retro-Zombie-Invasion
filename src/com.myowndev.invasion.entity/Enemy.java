@@ -8,7 +8,7 @@ import com.myowndev.invasion.helpers.Config;
  * Created by Iwan on 17.09.2015.
  */
 public class Enemy {
-    public final static int scale = 2; // сейчас работает только как hitbox_multiplier
+    public final static int scale = 2; // also hitbox_multiplier
     public int[] hitbox_x;
     public int[] hitbox_y;
     public static int scoreGain;

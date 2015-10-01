@@ -10,7 +10,7 @@ public class GameState {
 
     // Config variables:
     public static long pastTime = System.currentTimeMillis();
-    public static long timeOfTouch = 1; // prev value == 100 // Eto tipa cooldown najatia na ekran chto bi ne ostavalos na odnom meste najatie vsegda
+    public static long timeOfTouch = 1; // cd
 
     public static boolean tapped;
 }

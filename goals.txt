@@ -1,0 +1,88 @@
+Fix streching
+Fix click-system.
+Enhance game menu 
+	Pixelated font
+Develop ingame shop
+Develop ingame donation-shop
+	Donat currency
+Add some sounds
+	Zombie's death.
+	Mainmenu theme
+	Random zombie's sounds
+	Sound of taken some bonuses (add bonuse feature in future)
+Add weather effects into the game
+	Snow and rainy effects
+		Sounds of rain
+	Add some new backgrounds
+		For scenario mode
+Image for LOSESTATE screen
+Connect all texture into one game sprite file
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Config:
+Collect all stats and other thing that needed in cloud: google play statistics.
+	Of session:
+		Catched
+		Passed;
+		Score.
+	Of all time.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Create an visualisation of gain scores on game window.
+	Add perks feature
+		Timefreeze
+			boolean freeze
+				depends on time
+	If-statement of losing on survival mode and (already done)
+		Image of it
+			GAMESTATE = 4; // как logo state
+	Add levels into scenario mode
+	Add cooldown between touches, for health point realization
+	Add achievements
+	Add localization - ru/eng
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Design for enemies characteristics:
+	lvl	type	hp	speed	score(+/-)***	silverGain****
+	1	agi*	1	2		1/1				1
+	2	agi		2	2		1/2				1
+	3	str**	4	2		2/2				2
+	4	agi		2	6		2/4				2
+	5	str		10	1		2/5				2
+*agi for agility
+**str for strength
+***Score gain formulas:
+	For enemies that speed is their main ability (agi type):
+		speed - hp
+	For enemies that hp is their main ability (str type):
+		hp - speed
+****Silver gain formula:
+	silverGain = score gain
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Design for menu:
+Game Menu // GAMESTATE == 1;
+	1. START SURVIVAL
+		GAMESTATE == 2
+	2. START SCENARIO
+		Level design for scenario game mode:
+			Use GAMESTATE 1x for 1st campaign, 2x for second and etc
+	3. OPTIONS
+		GAMESTATE == 5
+	4. Statistics
+		GAMESTATE == 6
+	5. SHOP
+		GAMESTATE == 7
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 		
+Design pf tapping:
+	Every tap player make is surrounded with sound of touch (Huge stomp sound on ground)
+		Blood lake(?) after player's touch on zombie, after zombie's death.
+			Blood lake(?) must be cleared after(?) some time
+			After touch on the blood lake(?) dispose lake(?)
+Design of graphics:
+	Backround and zombies should be wintered
+		snow background, snowing/raining
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Shop design:
+-Buy perks
+Perks:
+	Freezing time ico in the right-side in hud
+	Buying and upgrading the turret
+	Buy and dog-robot
+	Buy explosion that should clear the screen

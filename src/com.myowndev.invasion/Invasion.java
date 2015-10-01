@@ -16,7 +16,7 @@ import com.myowndev.invasion.states.GameState;
 import com.myowndev.invasion.states.MenuState;
 
 public class Invasion extends ApplicationAdapter {
-	public static final int VIRTUAL_WIDTH = 854; //stretching is probably wont work, or should work incorrectly on screens larger than implemented size in the code
+	public static final int VIRTUAL_WIDTH = 854; // stretching is probably wont work, or should work incorrectly on screens larger than implemented size in the code
 	public static final int VIRTUAL_HEIGHT = 480;
 	private static final float ASPECT_RATIO = (float)VIRTUAL_WIDTH/(float)VIRTUAL_HEIGHT;
 	private OrthographicCamera camera;
@@ -55,8 +55,8 @@ public class Invasion extends ApplicationAdapter {
 		float h = (float)VIRTUAL_HEIGHT * scale;
 		//viewport.update((int)w, (int)h);
 		viewport.update(width,height);
-		camera.position.set(crop.x, crop.y, 0);
-		//camera.position.set(camera.viewportWidth / 2, camera.viewportHeight / 2, 0);
+		//camera.position.set(crop.x, crop.y, 0);
+		camera.position.set(camera.viewportWidth / 2, camera.viewportHeight / 2, 0);
 	}
 	@Override
 	public void render() {
@@ -73,7 +73,6 @@ public class Invasion extends ApplicationAdapter {
 				if (Gdx.input.justTouched()) Config.GAMESTATE = 1;
 				break;
 			case 1: // Menu state
-				font.draw(batch, "Nu chto tut skazati... Slava ukraine!!", 100, 25);
 				if (Assets.bgm != null) Assets.bgm.stop();
 				MenuState.update();
 				batch.draw(Assets.menu_logo,
